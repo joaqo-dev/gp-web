@@ -1,75 +1,102 @@
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+// import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { ArrowLeft, Package, FileText, Printer, Building2, Shirt, MonitorSpeaker, Calendar, Gift, Tv, Map, ArrowRight, CheckCircle } from "lucide-react";
+import {
+  ArrowLeft,
+  Package,
+  FileText,
+  Printer,
+  Building2,
+  Shirt,
+  MonitorSpeaker,
+  Calendar,
+  Gift,
+  Tv,
+  Map,
+  ArrowRight,
+  CheckCircle,
+} from "lucide-react";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const services = [
   {
     icon: Gift,
     title: "Merchandising",
-    description: "Productos promocionales y corporativos que fortalecen tu marca y generan recordación."
+    description:
+      "Productos promocionales y corporativos que fortalecen tu marca y generan recordación.",
   },
   {
     icon: FileText,
     title: "Papelería Corporativa",
-    description: "Diseño e impresión de tarjetas, carpetas, sobres y toda la papelería institucional."
+    description:
+      "Diseño e impresión de tarjetas, carpetas, sobres y toda la papelería institucional.",
   },
   {
     icon: Printer,
     title: "Impresión Digital",
-    description: "Servicios de impresión digital de alta calidad para todos tus proyectos gráficos."
+    description:
+      "Servicios de impresión digital de alta calidad para todos tus proyectos gráficos.",
   },
   {
     icon: Building2,
     title: "Estructuras",
-    description: "Diseño y construcción de estructuras para eventos, stands y espacios comerciales."
+    description:
+      "Diseño y construcción de estructuras para eventos, stands y espacios comerciales.",
   },
   {
     icon: Shirt,
     title: "Sublimación",
-    description: "Personalización de productos textiles y promocionales con tecnología de sublimación."
+    description:
+      "Personalización de productos textiles y promocionales con tecnología de sublimación.",
   },
   {
     icon: Shirt,
     title: "Ropa Corporativa",
-    description: "Uniformes y vestimenta corporativa que refleje la identidad de tu empresa."
+    description:
+      "Uniformes y vestimenta corporativa que refleje la identidad de tu empresa.",
   },
   {
     icon: Package,
     title: "Fabricación de Stands",
-    description: "Stands personalizados para ferias, eventos y puntos de venta."
+    description:
+      "Stands personalizados para ferias, eventos y puntos de venta.",
   },
   {
     icon: Calendar,
     title: "Eventos y Banquetería",
-    description: "Organización integral de eventos corporativos y servicios de banquetería."
+    description:
+      "Organización integral de eventos corporativos y servicios de banquetería.",
   },
   {
     icon: Gift,
     title: "Promoción",
-    description: "Estrategias y materiales promocionales para campañas de marketing."
+    description:
+      "Estrategias y materiales promocionales para campañas de marketing.",
   },
   {
     icon: Tv,
     title: "Pantallas LED",
-    description: "Instalación y gestión de pantallas LED para publicidad exterior e interior."
+    description:
+      "Instalación y gestión de pantallas LED para publicidad exterior e interior.",
   },
   {
     icon: Map,
     title: "Urbanos",
-    description: "Publicidad exterior urbana de gran formato y alto impacto visual."
+    description:
+      "Publicidad exterior urbana de gran formato y alto impacto visual.",
   },
   {
     icon: MonitorSpeaker,
     title: "Camineros",
-    description: "Señalética vial y publicitaria para carreteras y vías principales."
+    description:
+      "Señalética vial y publicitaria para carreteras y vías principales.",
   },
   {
     icon: Building2,
     title: "Lunetas",
-    description: "Publicidad en lunetas de vehículos y transporte público."
-  }
+    description: "Publicidad en lunetas de vehículos y transporte público.",
+  },
 ];
 
 const specialties = [
@@ -81,29 +108,30 @@ const specialties = [
   "Cajas luminosas de alto impacto",
   "Renovaciones completas de fachadas",
   "Instalación de mallas mesh en edificios",
-  "Proyectos gráficos de gran envergadura"
+  "Proyectos gráficos de gran envergadura",
 ];
 
 interface CorporateMarketingPageProps {
   onBack: () => void;
 }
 
-export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) {
+export function CorporateMarketingPage({
+  onBack,
+}: CorporateMarketingPageProps) {
   return (
     <div className="min-h-screen bg-white">
-      
       {/* Header */}
       <div className="bg-gradient-to-br from-accent/10 to-tertiary/10 py-8">
         <div className="container mx-auto px-4">
-          <Button 
-            variant="ghost" 
+          <Button
+            variant="ghost"
             onClick={onBack}
             className="mb-6 hover:bg-white/60"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
             Volver a servicios
           </Button>
-          
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-4 px-4 py-2 bg-gradient-to-r from-accent/10 to-tertiary/10 text-accent border-accent/20">
@@ -116,11 +144,11 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Trabajamos desde el diseño, fabricación y producción, hasta la instalación 
-                de material gráfico de interior o exterior.
+                Trabajamos desde el diseño, fabricación y producción, hasta la
+                instalación de material gráfico de interior o exterior.
               </p>
             </div>
-            
+
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-tertiary/20 rounded-3xl transform rotate-3"></div>
               <ImageWithFallback
@@ -141,7 +169,8 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
               Nuestro Proceso Integral
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Desde la conceptualización hasta la instalación final, nos encargamos de todo
+              Desde la conceptualización hasta la instalación final, nos
+              encargamos de todo
             </p>
           </div>
 
@@ -151,15 +180,30 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
                 <div className="w-16 h-16 bg-gradient-to-br from-accent to-tertiary rounded-xl flex items-center justify-center mb-6">
                   <Package className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl mb-4 text-gray-900">Diseño & Creatividad</h3>
+                <h3 className="text-2xl mb-4 text-gray-900">
+                  Diseño & Creatividad
+                </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Creamos identidades visuales impactantes que reflejan la esencia de tu marca y conectan con tu audiencia objetivo.
+                  Creamos identidades visuales impactantes que reflejan la
+                  esencia de tu marca y conectan con tu audiencia objetivo.
                 </p>
                 <ul className="space-y-3 text-sm text-gray-600">
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-accent mr-2" />Identidad corporativa completa</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-accent mr-2" />Diseño de señalética</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-accent mr-2" />Material gráfico promocional</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-accent mr-2" />Packaging especializado</li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-accent mr-2" />
+                    Identidad corporativa completa
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-accent mr-2" />
+                    Diseño de señalética
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-accent mr-2" />
+                    Material gráfico promocional
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-accent mr-2" />
+                    Packaging especializado
+                  </li>
                 </ul>
               </div>
             </div>
@@ -169,15 +213,30 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mb-6">
                   <Printer className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl mb-4 text-gray-900">Producción Especializada</h3>
+                <h3 className="text-2xl mb-4 text-gray-900">
+                  Producción Especializada
+                </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Fabricamos con tecnología de vanguardia y materiales de alta calidad para garantizar durabilidad y impacto visual.
+                  Fabricamos con tecnología de vanguardia y materiales de alta
+                  calidad para garantizar durabilidad y impacto visual.
                 </p>
                 <ul className="space-y-3 text-sm text-gray-600">
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-primary mr-2" />Letras volumétricas iluminadas</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-primary mr-2" />Señalética de gran formato</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-primary mr-2" />Displays interactivos</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-primary mr-2" />Estructuras metálicas</li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                    Letras volumétricas iluminadas
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                    Señalética de gran formato
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                    Displays interactivos
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                    Estructuras metálicas
+                  </li>
                 </ul>
               </div>
             </div>
@@ -187,15 +246,30 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
                 <div className="w-16 h-16 bg-gradient-to-br from-tertiary to-primary rounded-xl flex items-center justify-center mb-6">
                   <Building2 className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl mb-4 text-gray-900">Instalación Profesional</h3>
+                <h3 className="text-2xl mb-4 text-gray-900">
+                  Instalación Profesional
+                </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Ejecutamos instalaciones complejas con equipos especializados y personal técnico certificado.
+                  Ejecutamos instalaciones complejas con equipos especializados
+                  y personal técnico certificado.
                 </p>
                 <ul className="space-y-3 text-sm text-gray-600">
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-tertiary mr-2" />Fachadas y exteriores</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-tertiary mr-2" />Señalización urbana</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-tertiary mr-2" />Mallas mesh para edificios</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-tertiary mr-2" />Mantenimiento integral</li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-tertiary mr-2" />
+                    Fachadas y exteriores
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-tertiary mr-2" />
+                    Señalización urbana
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-tertiary mr-2" />
+                    Mallas mesh para edificios
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-tertiary mr-2" />
+                    Mantenimiento integral
+                  </li>
                 </ul>
               </div>
             </div>
@@ -207,7 +281,8 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
               Galería de Proyectos Realizados
             </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Algunos de nuestros trabajos más destacados en marketing corporativo
+              Algunos de nuestros trabajos más destacados en marketing
+              corporativo
             </p>
           </div>
 
@@ -222,7 +297,9 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <h4 className="text-lg mb-1">Señalética Corporativa</h4>
-                  <p className="text-sm text-gray-300">Torre empresarial - Las Condes</p>
+                  <p className="text-sm text-gray-300">
+                    Torre empresarial - Las Condes
+                  </p>
                 </div>
               </div>
             </div>
@@ -237,7 +314,9 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <h4 className="text-lg mb-1">Branding Retail</h4>
-                  <p className="text-sm text-gray-300">Tienda concepto - Mall premium</p>
+                  <p className="text-sm text-gray-300">
+                    Tienda concepto - Mall premium
+                  </p>
                 </div>
               </div>
             </div>
@@ -252,7 +331,9 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <h4 className="text-lg mb-1">Branding Vehicular</h4>
-                  <p className="text-sm text-gray-300">Flota corporativa completa</p>
+                  <p className="text-sm text-gray-300">
+                    Flota corporativa completa
+                  </p>
                 </div>
               </div>
             </div>
@@ -267,7 +348,9 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <h4 className="text-lg mb-1">Stand Ferial</h4>
-                  <p className="text-sm text-gray-300">Expo internacional - Centro de eventos</p>
+                  <p className="text-sm text-gray-300">
+                    Expo internacional - Centro de eventos
+                  </p>
                 </div>
               </div>
             </div>
@@ -282,7 +365,9 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <h4 className="text-lg mb-1">Branding Gastronómico</h4>
-                  <p className="text-sm text-gray-300">Restaurante premium - Providencia</p>
+                  <p className="text-sm text-gray-300">
+                    Restaurante premium - Providencia
+                  </p>
                 </div>
               </div>
             </div>
@@ -297,7 +382,9 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <h4 className="text-lg mb-1">Publicidad Exterior</h4>
-                  <p className="text-sm text-gray-300">Billboard digital - Autopista central</p>
+                  <p className="text-sm text-gray-300">
+                    Billboard digital - Autopista central
+                  </p>
                 </div>
               </div>
             </div>
@@ -314,13 +401,16 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
                 Somos Especialistas En
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Contamos con la experiencia y tecnología para ejecutar proyectos de gran envergadura 
-                y complejidad técnica.
+                Contamos con la experiencia y tecnología para ejecutar proyectos
+                de gran envergadura y complejidad técnica.
               </p>
 
               <div className="space-y-4 mb-8">
                 {specialties.slice(0, 6).map((specialty, index) => (
-                  <div key={index} className="flex items-center p-3 bg-white/80 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div
+                    key={index}
+                    className="flex items-center p-3 bg-white/80 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                  >
                     <CheckCircle className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
                     <span className="text-gray-700">{specialty}</span>
                   </div>
@@ -328,12 +418,14 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
               </div>
 
               <p className="text-gray-600 leading-relaxed">
-                Somos especialistas en instalaciones gráficas, branding de sucursales, POP, construimos letreros, 
-                letras volumétricas y cajas luminosas. Hacemos renovaciones de fachadas, instalamos mallas mesh 
-                adosadas a edificios y muchos otros proyectos de gran envergadura.
+                Somos especialistas en instalaciones gráficas, branding de
+                sucursales, POP, construimos letreros, letras volumétricas y
+                cajas luminosas. Hacemos renovaciones de fachadas, instalamos
+                mallas mesh adosadas a edificios y muchos otros proyectos de
+                gran envergadura.
               </p>
             </div>
-            
+
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-tertiary/30 to-accent/30 rounded-2xl transform -rotate-2"></div>
               <ImageWithFallback
@@ -343,10 +435,13 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
               />
             </div>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             {specialties.slice(6).map((specialty, index) => (
-              <div key={index} className="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div
+                key={index}
+                className="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              >
                 <CheckCircle className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
                 <span className="text-gray-700">{specialty}</span>
               </div>
@@ -363,8 +458,8 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
               Nuestro Proceso Integral
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Desde la conceptualización hasta la instalación final, 
-              manejamos cada etapa de tu proyecto con excelencia.
+              Desde la conceptualización hasta la instalación final, manejamos
+              cada etapa de tu proyecto con excelencia.
             </p>
           </div>
 
@@ -375,10 +470,11 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
               </div>
               <h3 className="text-xl mb-3 text-gray-900">Diseño</h3>
               <p className="text-gray-600">
-                Conceptualización y diseño personalizado según tu marca y objetivos.
+                Conceptualización y diseño personalizado según tu marca y
+                objetivos.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-tertiary to-accent rounded-xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-white text-xl">2</span>
@@ -388,17 +484,18 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
                 Producción con materiales de alta calidad y tecnología avanzada.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-white text-xl">3</span>
               </div>
               <h3 className="text-xl mb-3 text-gray-900">Producción</h3>
               <p className="text-gray-600">
-                Control de calidad riguroso en cada etapa del proceso productivo.
+                Control de calidad riguroso en cada etapa del proceso
+                productivo.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-white text-xl">4</span>
@@ -420,19 +517,19 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
               ¿Tienes un proyecto en mente?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Conversemos sobre cómo podemos materializar tus ideas y llevar 
-              la presencia visual de tu marca al siguiente nivel.
+              Conversemos sobre cómo podemos materializar tus ideas y llevar la
+              presencia visual de tu marca al siguiente nivel.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-gradient-to-r from-accent to-tertiary hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 onClick={() => {
-                  const contactSection = document.getElementById('contacto');
+                  const contactSection = document.getElementById("contacto");
                   if (contactSection) {
                     onBack();
                     setTimeout(() => {
-                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                      contactSection.scrollIntoView({ behavior: "smooth" });
                     }, 100);
                   }
                 }}
@@ -440,18 +537,13 @@ export function CorporateMarketingPage({ onBack }: CorporateMarketingPageProps) 
                 Solicitar cotización
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                onClick={onBack}
-              >
+              <Button variant="outline" size="lg" onClick={onBack}>
                 Ver todos los servicios
               </Button>
             </div>
           </div>
         </div>
       </section>
-
     </div>
   );
 }

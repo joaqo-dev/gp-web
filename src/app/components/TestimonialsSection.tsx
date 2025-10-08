@@ -1,4 +1,4 @@
-import { Card, CardContent } from "./ui/card";
+// import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ExternalLink, TrendingUp, Building, User, Star } from "lucide-react";
