@@ -1,173 +1,174 @@
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, ShieldCheck } from "lucide-react";
+import { Badge } from "./ui/badge";
 
 export function ContactSection() {
   return (
-    <section id="contacto" className="py-20 bg-gradient-to-b from-blue-50/30 to-indigo-50">
+    <section id="contacto" className="py-24 lg:py-32 bg-white relative overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none -z-10 mesh-gradient opacity-20"></div>
+      
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl lg:text-5xl text-gray-900">
-            ¿Listo para hacer
-            <span className="text-primary block">crecer tu negocio?</span>
+        <div className="text-center space-y-6 mb-20 max-w-4xl mx-auto">
+          <Badge className="px-5 py-1.5 rounded-full bg-primary/5 text-primary border-primary/10 text-sm font-semibold uppercase tracking-wider">
+            Contacto
+          </Badge>
+          <h2 className="text-4xl lg:text-6xl font-display font-bold text-gray-900 leading-tight">
+            ¿Listo para elevar
+            <span className="text-gradient block mt-2">tu impacto digital?</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Conversemos sobre tu proyecto. Te ofrecemos una consulta gratuita 
-            para analizar tus necesidades y proponer soluciones personalizadas.
+          <p className="text-xl text-gray-600 leading-relaxed font-medium">
+            Agendemos una consulta estratégica. Analizaremos tu situación actual 
+            y trazaremos una ruta clara hacia tus objetivos. Sin compromiso.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Form */}
-          <Card className="border-0 shadow-md">
-            <CardHeader>
-              <CardTitle className="text-2xl">Solicita tu consulta gratuita</CardTitle>
-              <p className="text-gray-600">
-                Completa el formulario y te contactaremos en menos de 24 horas.
-              </p>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm text-gray-700">
-                    Nombre *
-                  </label>
-                  <Input id="name" placeholder="Tu nombre completo" />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm text-gray-700">
-                    Email *
-                  </label>
-                  <Input id="email" type="email" placeholder="tu@email.com" />
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label htmlFor="company" className="text-sm text-gray-700">
-                    Empresa
-                  </label>
-                  <Input id="company" placeholder="Nombre de tu empresa" />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="phone" className="text-sm text-gray-700">
-                    Teléfono
-                  </label>
-                  <Input id="phone" placeholder="+56 9 1234 5678" />
-                </div>
+          <div className="glass p-8 lg:p-12 rounded-[2.5rem] border-white shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2"></div>
+            
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-3xl font-display font-bold text-gray-900 mb-2">Solicita tu auditoría</h3>
+                <p className="text-gray-600 font-medium">
+                  Completa tus datos y un especialista se pondrá en contacto contigo.
+                </p>
               </div>
 
-              <div className="space-y-2">
-                <label htmlFor="service" className="text-sm text-gray-700">
-                  ¿Qué servicio te interesa? *
-                </label>
-                <select 
-                  id="service" 
-                  className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                >
-                  <option value="">Selecciona un servicio</option>
-                  <option value="estrategia">Estrategia Digital</option>
-                  <option value="seo">SEO & SEM</option>
-                  <option value="contenido">Marketing de Contenidos</option>
-                  <option value="social">Redes Sociales</option>
-                  <option value="automation">Marketing Automation</option>
-                  <option value="branding">Branding Digital</option>
-                  <option value="integral">Solución Integral</option>
-                </select>
+              <div className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="text-xs font-black text-gray-500 uppercase tracking-widest ml-1">
+                      Nombre Completo
+                    </label>
+                    <Input id="name" placeholder="Ej: Juan Pérez" className="h-14 px-5 rounded-xl border-gray-100 bg-gray-50/50 focus:bg-white focus:ring-primary/20 transition-all font-medium" />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="text-xs font-black text-gray-500 uppercase tracking-widest ml-1">
+                      Email Corporativo
+                    </label>
+                    <Input id="email" type="email" placeholder="tu@empresa.com" className="h-14 px-5 rounded-xl border-gray-100 bg-gray-50/50 focus:bg-white transition-all font-medium" />
+                  </div>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="company" className="text-xs font-black text-gray-500 uppercase tracking-widest ml-1">
+                      Empresa / Proyecto
+                    </label>
+                    <Input id="company" placeholder="Nombre de organización" className="h-14 px-5 rounded-xl border-gray-100 bg-gray-50/50 focus:bg-white transition-all font-medium" />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="phone" className="text-xs font-black text-gray-500 uppercase tracking-widest ml-1">
+                      WhatsApp / Teléfono
+                    </label>
+                    <Input id="phone" placeholder="+56 9 ..." className="h-14 px-5 rounded-xl border-gray-100 bg-gray-50/50 focus:bg-white transition-all font-medium" />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="service" className="text-xs font-black text-gray-500 uppercase tracking-widest ml-1">
+                    Servicio de Interés
+                  </label>
+                  <select 
+                    id="service" 
+                    className="w-full h-14 px-5 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-transparent transition-all font-medium text-gray-700 outline-none"
+                  >
+                    <option value="">Selecciona tu prioridad</option>
+                    <option value="growth">Growth Marketing (Ventas)</option>
+                    <option value="corporate">Marketing Corporativo (Marca)</option>
+                    <option value="employability">Empleabilidad (Marca Personal)</option>
+                    <option value="other">Consultoría Estratégica</option>
+                  </select>
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="message" className="text-xs font-black text-gray-500 uppercase tracking-widest ml-1">
+                    Tu Mensaje
+                  </label>
+                  <Textarea 
+                    id="message" 
+                    placeholder="Cuéntanos brevemente tus objetivos..."
+                    className="min-h-[120px] p-5 rounded-xl border-gray-100 bg-gray-50/50 focus:bg-white transition-all font-medium resize-none"
+                  />
+                </div>
+
+                <Button className="w-full h-14 bg-gradient-to-r from-primary to-accent text-white font-black text-lg rounded-xl hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1 active:scale-95 group">
+                  Enviar Mensaje
+                  <Send className="ml-3 h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                </Button>
+
+                <div className="flex items-center justify-center space-x-2 text-gray-400">
+                  <ShieldCheck className="h-4 w-4" />
+                  <p className="text-[10px] font-bold uppercase tracking-widest">
+                    Datos Protegidos con Privacidad SSL
+                  </p>
+                </div>
               </div>
-
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm text-gray-700">
-                  Cuéntanos sobre tu proyecto *
-                </label>
-                <Textarea 
-                  id="message" 
-                  placeholder="Describe brevemente tu negocio, objetivos y cómo podemos ayudarte..."
-                  className="min-h-[120px]"
-                />
-              </div>
-
-              <Button className="w-full bg-primary hover:bg-primary/90 py-3">
-                Enviar solicitud
-              </Button>
-
-              <p className="text-sm text-gray-500 text-center">
-                Al enviar este formulario, aceptas que procesemos tus datos según nuestra política de privacidad.
-              </p>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
           {/* Contact Info */}
-          <div className="space-y-8">
-            <Card className="border-0 shadow-md">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">hola@greatprofile.cl</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      Respuesta garantizada en 24 horas
-                    </p>
-                  </div>
+          <div className="flex flex-col justify-center space-y-6 lg:pl-10">
+            {[
+              { 
+                icon: Mail, 
+                title: "Email Directo", 
+                value: "hola@vessel.cl", 
+                sub: "Respuesta en < 24 hrs",
+                gradient: "from-primary to-blue-600"
+              },
+              { 
+                icon: Phone, 
+                title: "Atención Telefónica", 
+                value: "+56 2 2345 6789", 
+                sub: "Lun a Vie, 9:00 - 18:00",
+                gradient: "from-accent to-pink-600"
+              },
+              { 
+                icon: MapPin, 
+                title: "Centro de Operaciones", 
+                value: "Las Condes, Santiago", 
+                sub: "Cobertura Global Latam",
+                gradient: "from-tertiary to-orange-500"
+              },
+            ].map((item, i) => (
+              <div 
+                key={i} 
+                className="group flex items-center p-6 bg-secondary/30 rounded-[2rem] border border-white hover:bg-white hover:shadow-xl transition-all duration-500"
+              >
+                <div className={`w-14 h-14 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center text-white shadow-lg transform group-hover:-rotate-3 transition-transform`}>
+                  <item.icon className="h-6 w-6" />
                 </div>
-              </CardContent>
-            </Card>
+                <div className="ml-6">
+                  <h4 className="text-xs font-black text-gray-400 uppercase tracking-[0.2em] mb-1">{item.title}</h4>
+                  <div className="text-xl font-display font-bold text-gray-900 group-hover:text-primary transition-colors">{item.value}</div>
+                  <div className="text-xs font-bold text-gray-500">{item.sub}</div>
+                </div>
+              </div>
+            ))}
 
-            <Card className="border-0 shadow-md">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Teléfono</h3>
-                    <p className="text-gray-600">+56 2 2345 6789</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      Lunes a viernes, 9:00 - 18:00
-                    </p>
-                  </div>
+            <div className="mt-8 p-10 bg-gradient-to-br from-primary to-slate-900 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-[0.05] rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 transition-transform group-hover:scale-150 duration-700"></div>
+              <div className="relative z-10 flex flex-col items-center text-center space-y-4">
+                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-2">
+                  <Clock className="h-8 w-8 text-white" />
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-md">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Oficina</h3>
-                    <p className="text-gray-600">Las Condes, Santiago</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      También trabajamos 100% remoto
-                    </p>
-                  </div>
+                <h3 className="text-2xl font-display font-bold">Consulta Gratuita</h3>
+                <p className="text-white/70 font-medium">
+                  30 minutos de análisis estratégico especializado sin compromiso comercial.
+                </p>
+                <div className="pt-4 w-full">
+                  <button className="w-full py-4 bg-white text-primary font-black rounded-xl hover:bg-secondary transition-all shadow-xl">
+                    Solicitar Agenda
+                  </button>
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-md bg-gradient-to-br from-primary to-accent text-white">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">Consulta gratuita</h3>
-                    <p className="text-white/90">
-                      30 minutos para analizar tu proyecto sin compromiso
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </div>
